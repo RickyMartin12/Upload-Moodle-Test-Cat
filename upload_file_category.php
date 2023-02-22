@@ -2,7 +2,7 @@
 
 header('Access-Control-Allow-Origin: *');
 
-    $path="https://upload-moodle-test-cat-production.up.railway.app/cat/";//server path
+    $path="cat/";//server path
     foreach ($_FILES as $key) {
         if($key['error'] == UPLOAD_ERR_OK ){
             $name = $key['name'];

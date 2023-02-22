@@ -24,6 +24,7 @@ WORKDIR /var/www/html
 #RUN rm /var/www/html/index.html
 COPY . /var/www/html/.
 
+RUN chmod -R 777 /var/www/html
 RUN chmod -R 777 /var/www/html/cat
 
 COPY ./ports.conf /etc/apache2/ports.conf
