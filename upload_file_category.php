@@ -1,6 +1,5 @@
 <?php
 header('Access-Control-Allow-Origin: *');
-
     $path="cat/";//server path
     foreach ($_FILES as $key) {
         if($key['error'] == UPLOAD_ERR_OK ){
