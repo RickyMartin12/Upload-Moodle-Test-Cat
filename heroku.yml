@@ -2,4 +2,4 @@ build:
   docker:
     web: Dockerfile.web
     volumes:
-      - ./upload.ini
+      - ./upload.ini:/usr/local/etc/php/conf.d/uploads.ini
