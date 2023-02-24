@@ -22,24 +22,12 @@ RUN set -ex; \
 WORKDIR /var/www/html
 
 #RUN rm /var/www/html/index.html
-COPY index.php /var/www/html
+COPY . /var/www/html/.
 
 RUN chmod -R 777 /var/www/html
 RUN chmod -R 777 /var/www/html/cat
 
-RUN mv "$PHP_INI_DIR/php.ini-development" "$PHP_INI_DIR/php.ini"
-
-RUN a2enmod rewrite
-RUN a2enmod lbmethod_byrequests
-RUN service apache2 restart
-EXPOSE 80
-CMD ["/usr/sbin/apache2ctl", "-D", "FOREGROUND"]
-
 COPY ./ports.conf /etc/apache2/ports.conf
-COPY ./apache.conf /etc/apache2/sites-available/000-default.conf
-CMD docker-php-entrypoint apache2-foreground
+COPY ./apache.conf /etc/apache2/site-enabled/000-default.conf
 
-
-
-
-
+RUN mv "$PHP_INI_DIR/php.ini-development" "$PHP_INI_DIR/php.ini"
