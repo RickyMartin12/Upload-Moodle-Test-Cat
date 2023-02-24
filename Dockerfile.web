@@ -1,6 +1,8 @@
 FROM geerlingguy/php-apache:latest
 #RUN rm /var/www/html/index.html
 
+COPY uploads.ini /usr/local/etc/php/conf.d/
+
 RUN echo "file_uploads = On\n" \
          "memory_limit = 500M\n" \
          "upload_max_filesize = 500M\n" \
