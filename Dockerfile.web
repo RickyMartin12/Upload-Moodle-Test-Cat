@@ -1,4 +1,6 @@
-FROM geerlingguy/php-apache:latest
+#FROM geerlingguy/php-apache:latest
+FROM php:8.0-apache
+
 
 COPY . /var/www/html/.
 
