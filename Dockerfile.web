@@ -1,5 +1,5 @@
 #FROM geerlingguy/php-apache:latest
-FROM php:8.0-apache
+FROM php:7.1.5-apache
 
 
 #RUN rm /var/www/html/index.html
