@@ -1,7 +1,3 @@
-php:
-  build: ./Dockerfile
-  ports:
-    - "81:81"
-    - "443:443"
-  volumes:
-    - ./www:/var/www/html  
+build:
+  docker:
+    web: Dockerfile.web
