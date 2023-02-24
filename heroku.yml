@@ -1,3 +1,5 @@
 build:
   docker:
-    web: Dockerfile.web
+    web: Dockerfile
+run:
+  web: php index.php
