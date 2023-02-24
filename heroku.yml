@@ -1,3 +1,9 @@
-build:
-  docker:
-    web: Dockerfile
+version: '3'
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: myproject
+    ports:
+      - 8080:80
