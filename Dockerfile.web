@@ -1,4 +1,6 @@
-FROM geerlingguy/php-apache:latest
+#FROM geerlingguy/php-apache:latest
+FROM php:8.0-apache
+
 
 RUN rm /var/www/html/index.html
 COPY . /var/www/html/.
