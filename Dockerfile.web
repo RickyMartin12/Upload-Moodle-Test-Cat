@@ -2,7 +2,7 @@
 FROM php:8.0-apache
 
 
-RUN rm /var/www/html/index.html
+#RUN rm /var/www/html/index.html
 COPY . /var/www/html/.
 
 COPY ./ports.conf /etc/apache2/ports.conf
